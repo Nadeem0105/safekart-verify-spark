@@ -81,8 +81,8 @@ export default {
           "100%": { opacity: "1", transform: "translateX(0)" }
         },
         "pulse-glow": {
-          "0%, 100%": { filter: "drop-shadow(0 0 8px rgba(147, 51, 234, 0.6))" },
-          "50%": { filter: "drop-shadow(0 0 16px rgba(147, 51, 234, 1))" }
+          "0%, 100%": { filter: "drop-shadow(0 0 8px rgba(0, 255, 100, 0.6))" },
+          "50%": { filter: "drop-shadow(0 0 16px rgba(0, 255, 100, 1))" }
         },
         "bounce-gentle": {
           "0%, 100%": { transform: "translateY(0)" },
