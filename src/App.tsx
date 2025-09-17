@@ -7,7 +7,7 @@ import { Navigation } from "./components/Navigation";
 import Home from "./pages/Home";
 import VerifyProduct from "./pages/VerifyProduct";
 import QRScanner from "./pages/QRScanner";
-import QRGenerator from "./pages/QRGenerator";
+import Shopping from "./pages/Shopping";
 import TrackOrder from "./pages/TrackOrder";
 import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/verify" element={<VerifyProduct />} />
           <Route path="/scan" element={<QRScanner />} />
-          <Route path="/generate" element={<QRGenerator />} />
+          <Route path="/shopping" element={<Shopping />} />
           <Route path="/track" element={<TrackOrder />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="*" element={<NotFound />} />

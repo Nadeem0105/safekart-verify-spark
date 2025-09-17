@@ -21,9 +21,9 @@ const Home = () => {
     },
     {
       icon: QrCode,
-      title: "Generate QR Code",
-      description: "Create QR codes for text, URLs, or any information you need to share",
-      href: "/generate",
+      title: "Shopping",
+      description: "Search and find products from our trusted verified inventory",
+      href: "/shopping",
       delay: "300ms"
     },
     {
