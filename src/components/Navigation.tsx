@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X, ShoppingCart } from "lucide-react";
+import { Shield, Menu, X, Palette } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/verify", label: "Verify Product" },
     { href: "/scan", label: "QR Scanner" },
-    { href: "/generate", label: "QR Generator" },
+    { href: "/shopping", label: "Shopping" },
     { href: "/track", label: "Track Order" },
     { href: "/admin", label: "Admin" },
   ];
@@ -40,6 +42,17 @@ export const Navigation = () => {
                 </Button>
               </Link>
             ))}
+            
+            {/* Theme Toggle Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleTheme}
+              className="ml-2 transition-all duration-300"
+              title={`Switch to ${theme === 'futuristic' ? 'Corporate' : 'Futuristic'} theme`}
+            >
+              <Palette className="h-4 w-4" />
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,6 +80,16 @@ export const Navigation = () => {
                 </Button>
               </Link>
             ))}
+            
+            {/* Mobile Theme Toggle */}
+            <Button
+              variant="ghost"
+              onClick={toggleTheme}
+              className="w-full justify-start"
+            >
+              <Palette className="h-4 w-4 mr-2" />
+              Switch to {theme === 'futuristic' ? 'Corporate' : 'Futuristic'} Theme
+            </Button>
           </div>
         )}
       </div>
